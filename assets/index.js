@@ -31,5 +31,5 @@ function convertTemp() {
             convertedTemp = startingTemp;
         }
     }
-    document.getElementById("convertedTemp").value = convertedTemp.toFixed(2);
+    document.getElementById("convertedTemp").value = convertedTemp;
 }
