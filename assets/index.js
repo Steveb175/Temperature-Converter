@@ -1,18 +1,18 @@
 // Conversion of input values
 function convertTemp() {
-    const startingTemp = document.getElementById(startingTemp);
-    const startingUnit = document.getElementById(startingUnit);
-    const convertedUnit = document.getElementById(convertedUnit);
+    const startingTemp = document.getElementById("startingTemp").value;
+    const startingUnit = document.getElementById("startingUnit").value;
+    const convertedUnit = document.getElementById("convertedUnit").value;
 
     let convertedTemp;
 
     if (startingUnit === "fahrenheit") {
         if (convertedUnit === "celsius") {
-            convertedTemp = (startingTemp - 32) * 5/9;
+            convertedTemp = (startingTemp - 32) * (5/9);
         } else if (convertedUnit === "kelvin") {
                 convertedTemp = (startingTemp - 32) * (5/9) + 273.15;
             } else {
-                startingTemp = convertedTemp;
+                convertedTemp = startingTemp;
             }
     } else if (startingUnit === "celsius") {
         if (convertedUnit === "fahrenheit") {
@@ -20,7 +20,7 @@ function convertTemp() {
         } else if (convertedUnit === "kelvin") {
             convertedTemp = (startingTemp + 273.15);
         } else {
-            startingTemp = convertedTemp;
+            convertedTemp = startingTemp;
         }
     } else if (startingUnit === "kelvin") {
         if (convertedUnit === "fahrenheit") {
@@ -28,8 +28,8 @@ function convertTemp() {
         } else if (convertedUnit === "celsius") {
             convertedTemp = (startingTemp - 273.15);
         } else {
-            startingTemp = convertedTemp;
+            convertedTemp = startingTemp;
         }
     }
-    document.getElementById("convertedTemp").value = convertTemp.toFixed(2);
+    document.getElementById("convertedTemp").value = convertedTemp.toFixed(2);
 }
