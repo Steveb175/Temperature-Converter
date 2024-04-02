@@ -5,7 +5,7 @@ function convertTemp() {
   );
   const startingUnit = document.getElementById("startingUnit").value;
   const convertedUnit = document.getElementById("convertedUnit").value;
-
+  
   let convertedTemp;
 
   if (startingUnit === "fahrenheit") {
@@ -50,6 +50,11 @@ function freezing(convertedUnit, convertedTemp) {
      document.body.style.backgroundColor = "#6494b4";
      mainContainer.style.backgroundColor = "#afd1f2";
      btn.style.backgroundColor = "#92b4cc"
+     mainContainer.classList.add("freezing");
+
+     setTimeout(function(){
+      mainContainer.classList.remove("freezing")
+     }, 3000);
     }
 }
 
