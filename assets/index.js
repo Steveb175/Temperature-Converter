@@ -34,4 +34,16 @@ function convertTemp() {
     }
   }
   document.getElementById("convertedTemp").value = convertedTemp;
+  //Call freezing function
+  freezing(convertedUnit, convertedTemp);
+}
+
+function freezing(convertedUnit, convertedTemp) {
+    if ((convertedUnit === "fahrenheit" && convertedTemp <= 32) ||
+     (convertedUnit === "celsius" && convertedTemp <= 0) ||
+     (convertedUnit === "kelvin" && convertedTemp <= 273.15)) {
+     document.body.style.backgroundColor = "#6494b4";
+    }
+
+
 }
