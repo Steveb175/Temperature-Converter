@@ -7,20 +7,26 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-<h1>Temperature Converter</h1>
-<input id="startingTemp">
-<select name="startingUnit" id="startingUnit">
-    <option value="fahrenheit">Fahrenheit</option>
-    <option value="celsius">Celsius</option>
-    <option value="kelvin">Kelvin</option>
-</select>
-<input id="convertedTemp">
-<select name="convertedUnit" id="convertedUnit">
-    <option value="fahrenheit">Fahrenheit</option>
-    <option value="celsius">Celcius</option>
-    <option value="kelvin">Kelvin</option>
-</select>
-<button onclick="convertTemp()">Convert</button>
+<div class="main-container">
+    <h1>Temperature Converter</h1>
+    <div class="container-starting">
+    <input id="startingTemp">
+    <select name="startingUnit" id="startingUnit">
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="celsius">Celsius</option>
+        <option value="kelvin">Kelvin</option>
+    </select>
+    </div>
+    <div class="container-converted">
+        <input id="convertedTemp" readonly>
+        <select name="convertedUnit" id="convertedUnit">
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="celsius">Celcius</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+    </div>
+    <button onclick="convertTemp()">Convert</button>
+</div>
 <script src="./assets/index.js"></script>
 </body>
 </html>
