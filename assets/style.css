@@ -57,8 +57,8 @@ button:hover {
     background-color: #45a049;
 }
 
-.freezing {
-    animation: horizontal-shaking 0.35s linear 0s 3;
+.noInputAnim {
+    animation: horizontal-shaking 0.35s linear 0s 2;
 }
 
 /* Animations */

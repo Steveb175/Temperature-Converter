@@ -50,11 +50,6 @@ function freezing(convertedUnit, convertedTemp) {
      document.body.style.backgroundColor = "#6494b4";
      mainContainer.style.backgroundColor = "#afd1f2";
      btn.style.backgroundColor = "#92b4cc"
-     mainContainer.classList.add("freezing");
-
-     setTimeout(function(){
-      mainContainer.classList.remove("freezing")
-     }, 3000);
     }
 }
 
@@ -83,5 +78,20 @@ function hot(convertedUnit, convertedTemp) {
    document.body.style.backgroundColor = "#900c3f";
    mainContainer.style.backgroundColor = "#c70039";
    btn.style.backgroundColor = "#f94c10"
+  }
+}
+
+function checkContent() {
+  var mainContainer = document.querySelector(".main-container");
+  var startingTemp = document.getElementById("startingTemp").value;
+  if (startingTemp === "") {
+    mainContainer.classList.add("noInputAnim");
+    document.getElementById("startingTemp").style.borderColor = "red";
+    setTimeout(function(){
+     mainContainer.classList.remove("noInputAnim");
+     document.getElementById("startingTemp").style.borderColor = "";
+    }, 850);
+  } else {
+    convertTemp();
   }
 }
